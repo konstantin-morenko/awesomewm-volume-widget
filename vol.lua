@@ -23,10 +23,8 @@ function get_vol()
 end
 
 function parse_vol(str)
-   local volume = string.match(str, "(%d?%d?%d)%%")
-   volume = string.format("% 3d", volume)
-   status = string.match(str, "%[(o[^%]]*)%]")
-   return {volume = volume, status = status}
+   local vleft, vright, vstate = string.match(str, "Left:.*%[(%d?%d?%d)%%%].*Right:.*%[(%d?%d?%d)%%%].*%[(o[^%]]*)%]")
+   return {volume = string.format("%3d", (vleft + vright)/2), status = vstate}
 end
 
 function format_vol(t)

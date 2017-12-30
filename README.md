@@ -15,6 +15,8 @@ functionality.  The package uses `amixer` to manipulate the volume
 Format of the string is "Vol: <volume value in perc><%|M>", if the
 volume is unmuted, displayed "%", if one is muted displayed "M".
 
+Volume value calculates between Left and Right channels.
+
 Widget can't catch changes in volume, so volume changed from another
 source will be updated with next changing volume from within the
 widget.
@@ -39,5 +41,5 @@ Keys:
   - XF86AudioMute: toggle muted/unmuted
 
 TODO:
-- [ ] If balance is very unsymmetrical, there is an error in volume value
+- [X] If balance is very unsymmetrical, there is an error in volume value
 - [ ] Timer to catch external volume changes
