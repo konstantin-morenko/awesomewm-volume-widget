@@ -1,9 +1,16 @@
 
 # Volume widget for Awesome-WM
 
+Clone repository with
+
+    git clone https://github.com/konstantin-morenko/awesomewm-volume-widget
+
+into your awesome config dir.
+
 Connect widget `volume_widget` to your widgets with commands, for
 example
 
+    require("awesomewm-volume-widget/vol")
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(volume_widget)
     layout:set_right(right_layout)
